@@ -424,7 +424,7 @@ async def tes(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     try:
         # Mengirimkan request ke API
-        response = requests.get(url, params=params)
+        response = requests.get(url, params=params, proxies={"http": None, "https": None})
         if response.status_code == 200:
             # Mengirimkan respons API ke pengguna
             await update.message.reply_text(f"🔍Hasil Pemeriksaan🔍:\n {response.text} 🚀")
@@ -1011,7 +1011,7 @@ async def trash(update: Update, context: CallbackContext) -> None:
 # Fungsi utama
 def main() -> None:
     # Inisialisasi bot dengan token
-    application = Application.builder().token('').build()
+    application = Application.builder().token('7901630582:AAEmlTcXKYg1UxUYkYlxXA5VbDlVd8Ezp_0').build()
 
     # Menjadwalkan pemeriksaan domain untuk setiap pengguna
     schedule_jobs(application)
