@@ -1011,7 +1011,7 @@ async def trash(update: Update, context: CallbackContext) -> None:
 # Fungsi utama
 def main() -> None:
     # Inisialisasi bot dengan token
-    application = Application.builder().token('7901630582:AAEmlTcXKYg1UxUYkYlxXA5VbDlVd8Ezp_0').build()
+    application = Application.builder().token('').build()
 
     # Menjadwalkan pemeriksaan domain untuk setiap pengguna
     schedule_jobs(application)
